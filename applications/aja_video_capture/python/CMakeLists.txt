@@ -27,7 +27,19 @@ add_custom_target(python_aja_capture_yaml
   BYPRODUCTS "aja_capture.yaml"
 )
 
-add_dependencies(python_aja_capture python_aja_capture_yaml)
+add_custom_target(python_aja_capture_overlay ALL
+  COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_SOURCE_DIR}/aja_capture_overlay.py" ${CMAKE_CURRENT_BINARY_DIR}
+  DEPENDS "aja_capture_overlay.py"
+  BYPRODUCTS "aja_capture_overlay.py"
+)
+
+# Copy config file
+add_custom_target(python_aja_capture_overlay_yaml
+  COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_SOURCE_DIR}/aja_capture_overlay.yaml" ${CMAKE_CURRENT_BINARY_DIR}
+  DEPENDS "aja_capture_overlay.yaml"
+  BYPRODUCTS "aja_capture_overlay.yaml"
+)
+add_dependencies(python_aja_capture_overlay python_aja_capture_overlay_yaml)
 
 # Testing
 if(BUILD_TESTING)
