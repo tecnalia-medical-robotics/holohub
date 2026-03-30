@@ -529,6 +529,9 @@ void AJASourceOp::compute(InputContext& op_input, OutputContext& op_output,
                           ExecutionContext& context) {
   // holoscan::gxf::Entity
   bool have_overlay_in = false;
+
+  const auto write_size = GetVideoWriteSize(video_format_, pixel_format_);
+
   holoscan::gxf::Entity overlay_in_message;
   auto maybe_overlay_message = op_input.receive<gxf::Entity>("overlay_buffer_input");
   if (!maybe_overlay_message || maybe_overlay_message.value().is_null()) {
@@ -545,15 +548,59 @@ void AJASourceOp::compute(InputContext& op_input, OutputContext& op_output,
       // Overlay uses HW frames 2 and 3.
       current_overlay_hw_frame_ = ((current_overlay_hw_frame_ + 1) % 2) + 2;
 
-      ULWord* ptr = reinterpret_cast<ULWord*>(overlay_buffer->pointer());
-      device_.DMAWriteFrame(current_overlay_hw_frame_, ptr, overlay_buffer->size());
-      device_.SetOutputFrame(overlay_channel_, current_overlay_hw_frame_);
-      device_.SetMixerMode(0, NTV2MIXERMODE_MIX);
+      if (overlay_buffer->size() < write_size) {
+        HOLOSCAN_LOG_ERROR(
+            "Overlay buffer too small: got {} bytes, expected at least {} bytes",
+            overlay_buffer->size(),
+            write_size);
+      } else {
+        void* dma_overlay_buffer = overlay_buffers_[current_buffer_];
+        void* overlay_src = overlay_buffer->pointer();
+        bool overlay_ready = true;
+
+        if (overlay_src != dma_overlay_buffer) {
+          cudaPointerAttributes src_attr{}, dst_attr{};
+          auto src_attr_err = cudaPointerGetAttributes(&src_attr, overlay_src);
+          auto dst_attr_err = cudaPointerGetAttributes(&dst_attr, dma_overlay_buffer);
+          cudaGetLastError();
+
+          const bool src_is_device =
+              (src_attr_err == cudaSuccess && src_attr.type == cudaMemoryTypeDevice);
+          const bool dst_is_device =
+              (dst_attr_err == cudaSuccess && dst_attr.type == cudaMemoryTypeDevice);
+
+          cudaMemcpyKind copy_kind = cudaMemcpyHostToHost;
+          if (!src_is_device && dst_is_device) {
+            copy_kind = cudaMemcpyHostToDevice;
+          } else if (src_is_device && !dst_is_device) {
+            copy_kind = cudaMemcpyDeviceToHost;
+          } else if (src_is_device && dst_is_device) {
+            copy_kind = cudaMemcpyDeviceToDevice;
+          }
+
+          auto copy_status = cudaMemcpy(dma_overlay_buffer, overlay_src, write_size, copy_kind);
+          if (copy_status != cudaSuccess) {
+            HOLOSCAN_LOG_ERROR("Failed to stage overlay into DMA buffer: {}",
+                               cudaGetErrorString(copy_status));
+            overlay_ready = false;
+          }
+        }
+
+        if (overlay_ready) {
+          ULWord* ptr = reinterpret_cast<ULWord*>(dma_overlay_buffer);
+          if (!device_.DMAWriteFrame(current_overlay_hw_frame_, ptr, write_size)) {
+            HOLOSCAN_LOG_ERROR("DMAWriteFrame failed for overlay frame {}",
+                               current_overlay_hw_frame_);
+          } else {
+            device_.SetOutputFrame(overlay_channel_, current_overlay_hw_frame_);
+            device_.SetMixerMode(0, NTV2MIXERMODE_MIX);
+          }
+        }
+      }
     } catch (const std::runtime_error& r_) {
       HOLOSCAN_LOG_TRACE("Failed to read VideoBuffer with error: {}", std::string(r_.what()));
     }
   }
-
   // Update the next input frame and wait until it starts.
   uint32_t next_hw_frame = (current_hw_frame_ + 1) % 2;
   device_.SetInputFrame(channel_, next_hw_frame);
