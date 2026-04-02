@@ -168,6 +168,15 @@ void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_ou
       nvidia::gxf::VideoTypeTraits<nvidia::gxf::VideoFormat::GXF_VIDEO_FORMAT_RGBA> video_type;
       nvidia::gxf::VideoFormatSize<nvidia::gxf::VideoFormat::GXF_VIDEO_FORMAT_RGBA> color_format;
       auto color_planes = color_format.getDefaultColorPlanes(width_, height_);
+      nvidia::gxf::VideoBufferInfo info{
+          width_,
+          height_,
+          video_type.value,
+          color_planes,
+          nvidia::gxf::SurfaceLayout::GXF_SURFACE_LAYOUT_PITCH_LINEAR};
+      auto storage_type = nvidia::gxf::MemoryStorageType::kDevice;
+      auto size = width_ * height_ * in_channels;
+      buffer.value()->wrapMemory(info, size, storage_type, in_tensor_ptr, nullptr);
       break;
     }
     case nvidia::gxf::VideoFormat::GXF_VIDEO_FORMAT_BGRA: {
@@ -177,6 +186,15 @@ void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_ou
       nvidia::gxf::VideoTypeTraits<nvidia::gxf::VideoFormat::GXF_VIDEO_FORMAT_BGRA> video_type;
       nvidia::gxf::VideoFormatSize<nvidia::gxf::VideoFormat::GXF_VIDEO_FORMAT_BGRA> color_format;
       auto color_planes = color_format.getDefaultColorPlanes(width_, height_);
+      nvidia::gxf::VideoBufferInfo info{
+          width_,
+          height_,
+          video_type.value,
+          color_planes,
+          nvidia::gxf::SurfaceLayout::GXF_SURFACE_LAYOUT_PITCH_LINEAR};
+      auto storage_type = nvidia::gxf::MemoryStorageType::kDevice;
+      auto size = width_ * height_ * in_channels;
+      buffer.value()->wrapMemory(info, size, storage_type, in_tensor_ptr, nullptr);
       break;
     }
     default:
