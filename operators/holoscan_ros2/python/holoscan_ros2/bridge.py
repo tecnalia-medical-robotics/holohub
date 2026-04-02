@@ -189,6 +189,8 @@ class Bridge(holoscan.core.Resource):
                 message_type: Type of messages to receive (e.g., std_msgs.msg.String)
                 message_queue_max_size: Maximum size of message queue (0 for unlimited)
             """
+            if message_queue_max_size < 0:
+                raise ValueError("message_queue_max_size must be >= 0")
             self.message_queue_max_size = message_queue_max_size
 
             self.message_queue = Queue(
