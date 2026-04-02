@@ -67,9 +67,11 @@ void TensorToVideoBufferOp::start() {
 
 void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_output,
                                     ExecutionContext& context) {
-  // Process input message
-  // The type of `in_message` is 'holoscan::gxf::Entity'.
+  // Receive input message first, then synchronize/propagate its CUDA stream.
+  // This keeps zero-copy semantics while ensuring downstream sees the right stream ordering.
   auto in_message = op_input.receive<gxf::Entity>("in_tensor").value();
+  (void)op_input.receive_cuda_stream("in_tensor");
+  (void)context;
 
   const std::string in_tensor_name = in_tensor_name_.get();
 
@@ -116,11 +118,10 @@ void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_ou
     throw std::runtime_error("Only supports 3 channel input tensor");
   }
 
-  // Create and pass the GXF video buffer downstream.
-  auto out_message = nvidia::gxf::Entity::New(context.context());
-  if (!out_message) { throw std::runtime_error("Failed to allocate message; terminating."); }
-
-  auto buffer = out_message.value().add<nvidia::gxf::VideoBuffer>();
+  // Zero-copy: attach a VideoBuffer to the SAME incoming entity so the wrapped
+  // tensor memory remains owned/alive for downstream consumers.
+  auto& gxf_in_message = static_cast<nvidia::gxf::Entity&>(in_message);
+  auto buffer = gxf_in_message.add<nvidia::gxf::VideoBuffer>();
   if (!buffer) { throw std::runtime_error("Failed to allocate video buffer; terminating."); }
 
   auto in_tensor_ptr = static_cast<uint8_t*>(in_tensor_data);
@@ -160,9 +161,8 @@ void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_ou
       break;
   }
 
-  // Transmit the gxf video buffer to target
-  auto result = gxf::Entity(std::move(out_message.value()));
-  op_output.emit(result);
+  // Re-emit the same entity: stream metadata is propagated automatically.
+  op_output.emit(in_message, "out_video_buffer");
 }
 
 }  // namespace holoscan::ops
