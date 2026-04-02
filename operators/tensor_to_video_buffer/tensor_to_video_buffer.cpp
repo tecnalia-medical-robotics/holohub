@@ -70,14 +70,13 @@ void TensorToVideoBufferOp::start() {
 }
 
 void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_output,
-                                    ExecutionContext& context) {
+                                    ExecutionContext& /*context*/) {
   auto in_message = op_input.receive<gxf::Entity>("in_tensor").value();
 
   // Intentionally receive the input CUDA stream.
   // The returned value is not used directly; this call makes the framework track
   // the stream dependency for the zero-copy entity emitted downstream.
   [[maybe_unused]] auto input_cuda_stream = op_input.receive_cuda_stream("in_tensor");
-  (void)context;
 
   const std::string in_tensor_name = in_tensor_name_.get();
 
@@ -98,7 +97,6 @@ void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_ou
     auto in_tensor = gxf::GXFTensor::from_tensor(maybe_tensor);
   #endif
 
-  nvidia::gxf::Shape out_shape{0, 0, 0};
   void* in_tensor_data = nullptr;
   nvidia::gxf::PrimitiveType in_primitive_type = nvidia::gxf::PrimitiveType::kCustom;
   nvidia::gxf::MemoryStorageType in_memory_storage_type = nvidia::gxf::MemoryStorageType::kHost;
@@ -133,7 +131,7 @@ void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_ou
   switch (video_format_type_) {
     case nvidia::gxf::VideoFormat::GXF_VIDEO_FORMAT_YUV420: {
       if (in_channels != 3) {
-          throw std::runtime_error("YUV420 path expects a 3-channel input tensor view");
+        throw std::runtime_error("YUV420 path expects a 3-channel input tensor view");
       }
       nvidia::gxf::VideoTypeTraits<nvidia::gxf::VideoFormat::GXF_VIDEO_FORMAT_YUV420> video_type;
       nvidia::gxf::VideoFormatSize<nvidia::gxf::VideoFormat::GXF_VIDEO_FORMAT_YUV420> color_format;
