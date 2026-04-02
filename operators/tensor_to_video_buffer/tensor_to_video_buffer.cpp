@@ -30,6 +30,7 @@
 
 #include "holoscan/core/execution_context.hpp"
 #include "holoscan/core/gxf/entity.hpp"
+#include "holoscan/core/io_context.hpp"
 #include "holoscan/core/operator_spec.hpp"
 
 #include "tensor_to_video_buffer.hpp"
