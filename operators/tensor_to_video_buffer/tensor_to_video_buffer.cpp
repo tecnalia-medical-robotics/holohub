@@ -117,6 +117,10 @@ void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_ou
         fmt::format("Tensor '{}' or VideoBuffer is not allocated on device", in_tensor_name));
   }
 
+  if (in_primitive_type != nvidia::gxf::PrimitiveType::kUnsigned8) {
+    throw std::runtime_error("Only supports uint8 input tensor");
+  }
+
   // Zero-copy: attach a VideoBuffer to the SAME incoming entity so the wrapped
   // tensor memory remains owned/alive for downstream consumers.
   auto& gxf_in_message = static_cast<nvidia::gxf::Entity&>(in_message);
