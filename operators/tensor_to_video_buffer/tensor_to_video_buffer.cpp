@@ -71,10 +71,12 @@ void TensorToVideoBufferOp::start() {
 
 void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_output,
                                     ExecutionContext& context) {
-  // Receive input message first, then synchronize/propagate its CUDA stream.
-  // This keeps zero-copy semantics while ensuring downstream sees the right stream ordering.
   auto in_message = op_input.receive<gxf::Entity>("in_tensor").value();
-  (void)op_input.receive_cuda_stream("in_tensor");
+
+  // Intentionally receive the input CUDA stream.
+  // The returned value is not used directly; this call makes the framework track
+  // the stream dependency for the zero-copy entity emitted downstream.
+  [[maybe_unused]] auto input_cuda_stream = op_input.receive_cuda_stream("in_tensor");
   (void)context;
 
   const std::string in_tensor_name = in_tensor_name_.get();
@@ -206,7 +208,8 @@ void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_ou
       break;
   }
 
-  // Re-emit the same entity: stream metadata is propagated automatically.
+  // Re-emit the same entity for zero-copy. The input CUDA stream is received
+  // above so the framework can track the intended stream dependency/order.
   op_output.emit(in_message, "out_video_buffer");
 }
 
