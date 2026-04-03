@@ -97,6 +97,10 @@ void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_ou
     auto in_tensor = gxf::GXFTensor::from_tensor(maybe_tensor);
   #endif
 
+  if (in_tensor->shape().rank() < 3) {
+    throw std::runtime_error(fmt::format("Tensor '{}' rank must be >= 3 for HxWxC access", in_tensor_name));
+  }
+
   void* in_tensor_data = nullptr;
   nvidia::gxf::PrimitiveType in_primitive_type = nvidia::gxf::PrimitiveType::kCustom;
   nvidia::gxf::MemoryStorageType in_memory_storage_type = nvidia::gxf::MemoryStorageType::kHost;
