@@ -66,7 +66,13 @@ void TensorToVideoBufferOp::setup(OperatorSpec& spec) {
 }
 
 void TensorToVideoBufferOp::start() {
-  video_format_type_ = toVideoFormat(video_format_);
+  const auto format = video_format_.get();
+  video_format_type_ = toVideoFormat(format);
+  if (video_format_type_ == nvidia::gxf::VideoFormat::GXF_VIDEO_FORMAT_CUSTOM) {
+    throw std::runtime_error(
+        fmt::format("Unsupported video_format '{}'. Expected one of: rgb, rgba, bgra, yuv420",
+                    format));
+  }
 }
 
 void TensorToVideoBufferOp::compute(InputContext& op_input, OutputContext& op_output,
