@@ -29,7 +29,7 @@
 		"requirements": {
 		},
 		"run": {
-			"command": "python3 <holohub_app_bin>/aja_capture_overlay.py",
+			"command": "python3 <holohub_app_bin>/aja_capture.py",
 			"workdir": "holohub_bin"
 		}
 	}
