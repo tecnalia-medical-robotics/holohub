@@ -17,13 +17,14 @@ limitations under the License.
 
 import os
 
-from holoscan.conditions import CountCondition
-from holoscan.core import Application, OperatorSpec
-from holoscan.operators import HolovizOp
-from holohub.aja_source import AJASourceOp
 import cupy as cp
 import holoscan as hs
+from holoscan.core import Application, OperatorSpec
 from holoscan.gxf import Entity
+from holoscan.operators import HolovizOp
+
+from holohub.aja_source import AJASourceOp
+
 
 def _make_circle_rgba(
     width: int,
