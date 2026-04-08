@@ -56,15 +56,38 @@ class CircleImageOp(hs.core.Operator):
         spec.param("center_y", 540)
         spec.param("color", (0, 255, 0, 255))
 
+
+    def _validate_circle_config(self):
+        if self.width <= 0:
+            raise ValueError(f"width must be > 0, got {self.width}")
+        if self.height <= 0:
+            raise ValueError(f"height must be > 0, got {self.height}")
+        if self.radius < 0:
+            raise ValueError(f"radius must be >= 0, got {self.radius}")
+        if not 0 <= self.center_x < self.width:
+            raise ValueError(
+                f"center_x must be in [0, {self.width}), got {self.center_x}"
+            )
+        if not 0 <= self.center_y < self.height:
+            raise ValueError(
+                f"center_y must be in [0, {self.height}), got {self.center_y}"
+            )
+
     def compute(self, op_input, op_output, context):
-        in_ent = op_input.receive("in")
+        op_input.receive("in")
+
+        self._validate_circle_config()
+
+        # Intentionally regenerate the overlay every frame.
+        # In real-time pipelines this operator may represent dynamic
+        # analysis output rather than a static precomputed asset.
         img_gpu = _make_circle_rgba(
             width=self.width,
             height=self.height,
             radius=self.radius,
             center_x=self.center_x,
             center_y=self.center_y,
-            color=self.color,
+            color=tuple(self.color),
         )
         msg = Entity(context)
         msg.add(hs.as_tensor(img_gpu), self.out_tensor_name)
