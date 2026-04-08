@@ -546,7 +546,7 @@ void AJASourceOp::compute(InputContext& op_input, OutputContext& op_output,
     try {
       overlay_buffer = holoscan::gxf::get_videobuffer(overlay_in_message);
       // Overlay uses HW frames 2 and 3.
-      current_overlay_hw_frame_ = ((current_overlay_hw_frame_ + 1) % 2) + 2;
+      const uint8_t next_overlay_hw_frame = ((current_overlay_hw_frame_ + 1) % 2) + 2;
 
       if (overlay_buffer->size() < write_size) {
         HOLOSCAN_LOG_ERROR(
@@ -588,10 +588,11 @@ void AJASourceOp::compute(InputContext& op_input, OutputContext& op_output,
 
         if (overlay_ready) {
           ULWord* ptr = reinterpret_cast<ULWord*>(dma_overlay_buffer);
-          if (!device_.DMAWriteFrame(current_overlay_hw_frame_, ptr, write_size)) {
+          if (!device_.DMAWriteFrame(next_overlay_hw_frame, ptr, write_size)) {
             HOLOSCAN_LOG_ERROR("DMAWriteFrame failed for overlay frame {}",
-                               current_overlay_hw_frame_);
+                               next_overlay_hw_frame);
           } else {
+            current_overlay_hw_frame_ = next_overlay_hw_frame;
             device_.SetOutputFrame(overlay_channel_, current_overlay_hw_frame_);
             device_.SetMixerMode(0, NTV2MIXERMODE_MIX);
           }
