@@ -38,7 +38,7 @@
 			},
 			"overlay": {
 				"run": {
-					"command": "python3 <holohub_app_bin>/aja_capture_overlay.py",
+					"command": "python3 <holohub_app_bin>/aja_capture_external_overlay.py",
 					"workdir": "holohub_bin"
 				}
 			}

@@ -132,5 +132,5 @@ def main(config_file):
 
 
 if __name__ == "__main__":
-    config_file = os.path.join(os.path.dirname(__file__), "aja_capture_overlay.yaml")
+    config_file = os.path.join(os.path.dirname(__file__), "aja_capture_external_overlay.yaml")
     main(config_file=config_file)
