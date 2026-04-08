@@ -31,12 +31,14 @@
 		"default_mode": "capture",
 		"modes": {
 			"capture": {
+				"description": "Standard AJA video capture example.",
 				"run": {
 					"command": "python3 <holohub_app_bin>/aja_capture.py",
 					"workdir": "holohub_bin"
 				}
 			},
 			"overlay": {
+				"description": "AJA video capture with external overlay example.",
 				"run": {
 					"command": "python3 <holohub_app_bin>/aja_capture_external_overlay.py",
 					"workdir": "holohub_bin"
