@@ -61,6 +61,6 @@ Required configuration:
 
 Required port connections:
 
-`aja_source.overlay_buffer_output` → `holoviz.render_buffer_input`
-
-`holoviz.render_buffer_output` → `aja_source.overlay_buffer_input`
+- `aja_source.video_buffer_output` → `holoviz.receivers`
+- `aja_source.overlay_buffer_output` → `holoviz.render_buffer_input`
+- `holoviz.render_buffer_output` → `aja_source.overlay_buffer_input`
