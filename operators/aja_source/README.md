@@ -52,12 +52,12 @@ Required configuration:
 
 **aja_source**:
 
-- enable_overlay: true
+- `enable_overlay: true`
 
 **holoviz**:
 
-- enable_render_buffer_input: true
-- enable_render_buffer_output: true
+- `enable_render_buffer_input: true`
+- `enable_render_buffer_output: true`
 
 Required port connections:
 
