@@ -53,7 +53,9 @@ This makes it suitable for low-latency overlay paths and avoids an extra buffer 
 
 To enable overlay on the AJA source operator, set `enable_overlay: true`.
 
-For Holoviz-based overlay workflows, set `enable_render_buffer_input: true` and `enable_render_buffer_output: true`.
+For Holoviz-based overlay workflows, configure the **Holoviz** operator with
+`enable_render_buffer_input: true` and `enable_render_buffer_output: true`.
+These are Holoviz settings (not `aja_source` parameters).
 
 Two common usage patterns are:
 
