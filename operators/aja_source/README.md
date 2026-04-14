@@ -85,7 +85,7 @@ Two common usage patterns are:
 
 In summary:
 
-- `video_buffer_output` carries the captured source image to Holoviz for display.
+- `video_buffer_output` carries the captured source image to Holoviz for display (used in pattern 2 only).
 - `overlay_buffer_output` provides the render buffer consumed by Holoviz.
 - `render_buffer_output` returns the rendered overlay buffer back from Holoviz to the AJA source operator.
 
