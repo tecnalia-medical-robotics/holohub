@@ -45,16 +45,16 @@ class PyGstVideoRecorderOp : public GstVideoRecorderOp {
  public:
   using GstVideoRecorderOp::GstVideoRecorderOp;
 
-    PyGstVideoRecorderOp(Fragment* fragment,
-                         const py::args& args,
-                         const std::string& encoder = "nvh264",
-                         const std::string& format = "RGBA",
-                         const std::string& framerate = "30/1",
-                         size_t max_buffers = 10,
-                         bool block = true,
-                         const std::string& filename = "output.mp4",
-                         std::map<std::string, std::string> properties = {},
-                         const std::string& name = "gst_video_recorder")
+  PyGstVideoRecorderOp(Fragment* fragment,
+                       const py::args& args,
+                       const std::string& encoder = "nvh264",
+                       const std::string& format = "RGBA",
+                       const std::string& framerate = "30/1",
+                       size_t max_buffers = 10,
+                       bool block = true,
+                       const std::string& filename = "output.mp4",
+                       std::map<std::string, std::string> properties = {},
+                       const std::string& name = "gst_video_recorder")
       : GstVideoRecorderOp(ArgList{Arg{"encoder", encoder},
                                    Arg{"format", format},
                                    Arg{"framerate", framerate},
