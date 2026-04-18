@@ -43,7 +43,7 @@ class PyGstVideoRecorderOp : public GstVideoRecorderOp {
   using GstVideoRecorderOp::GstVideoRecorderOp;
 
     PyGstVideoRecorderOp(Fragment* fragment,
-                         const py::args& args, 
+                         const py::args& args,
                          const std::string& encoder = "nvh264",
                          const std::string& format = "RGBA",
                          const std::string& framerate = "30/1",
@@ -81,8 +81,10 @@ PYBIND11_MODULE(_holoscan_gstreamer_bridge, m) {
   m.attr("__version__") = "dev";
 #endif
 
-  py::class_<GstVideoRecorderOp, PyGstVideoRecorderOp, Operator, std::shared_ptr<GstVideoRecorderOp>>(
-      m, "GstVideoRecorderOp")
+  py::class_<GstVideoRecorderOp,
+             PyGstVideoRecorderOp,
+             Operator,
+             std::shared_ptr<GstVideoRecorderOp>>(m, "GstVideoRecorderOp")
       .def(py::init<Fragment*,
                     const py::args&,
                     const std::string&,
