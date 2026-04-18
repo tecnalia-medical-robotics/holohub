@@ -48,23 +48,22 @@ format : str
     Pixel format for video data (e.g. ``"RGBA"``, ``"RGB"``, ``"BGRA"``, ``"BGR"``, and ``"GRAY8"``).
     Default value is ``"RGBA"``.
 framerate : str
-    Video framerate as fraction or decimal.
-    Formats: "30/1", "30000/1001", "29.97", "60"
-    ``"30/1"`` or ``"30000/1001"``, and decimal values such as ``"29.97"``.
-    Special: ``"0/1"`` for live mode (no framerate control, process frames as fast as they come)
-    Default value is ``"30/1"``.
+    Video framerate as a fraction or decimal, for example ``"30/1"``,
+    ``"30000/1001"``, ``"29.97"``, or ``"60"``.
+    Special value ``"0/1"`` enables live mode with no framerate control.
+    Default value is ``"30/1"``
 max_buffers : int
-    Maximum number of buffers to queue (0 = unlimited)
+    Maximum number of buffers to queue (0 = unlimited).
     Default value is ``10``.
 block : bool
     Whether ``push_buffer()`` blocks when the internal queue is full (``True`` = block, ``False`` = non-blocking, may drop/timeout).
     Default value is ``True``.
 filename : str
     Output video filename.
-    If no extension is provided, ``".mp4"`` is automatically appended
-    Default value is ``output.mp4``.
+    If no extension is provided, ``".mp4"`` is automatically appended.
+    Default value is ``"output.mp4"``.
 properties : dict of str to str
-    Map of encoder-specific properties
+    Map of encoder-specific properties.
     Examples include ``{"bitrate": "8000", "preset": "1", "gop-size": "30"}``.
     Default value is an empty dictionary.
 )doc")
