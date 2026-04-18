@@ -18,6 +18,9 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
 
+#include "gst_video_recorder_op_pydoc.hpp"
+#include <pybind11/stl.h>
+
 #include <map>
 #include <string>
 
