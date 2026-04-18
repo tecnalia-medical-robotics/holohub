@@ -57,8 +57,7 @@ max_buffers : int
     Maximum number of buffers to queue (0 = unlimited)
     Default value is ``10``.
 block : bool
-    Whether ``push_buffer()`` should block when the internal queue is full.
-    Whether push_buffer() should block when the queue is full (true = block, false = non-blocking, may drop/timeout)
+    Whether ``push_buffer()`` blocks when the internal queue is full (``True`` = block, ``False`` = non-blocking, may drop/timeout).
     Default value is ``True``.
 filename : str
     Output video filename.
