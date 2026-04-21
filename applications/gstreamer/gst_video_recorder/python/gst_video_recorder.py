@@ -23,7 +23,9 @@ import numpy as np
 
 from holoscan.conditions import CountCondition
 from holoscan.core import Application, Operator, OperatorSpec
-from holoscan.operators import V4L2VideoCaptureOp
+from holoscan.operators import FormatConverterOp, V4L2VideoCaptureOp
+from holoscan.resources import BlockMemoryPool, MemoryStorageType, UnboundedAllocator
+
 from holohub.holoscan_gstreamer_bridge import GstVideoRecorderOp
 
 
@@ -199,32 +201,6 @@ class GstVideoRecorderApp(Application):
     def compose(self):
         condition_args = self._source_condition_args()
 
-        if self.args.source == "pattern":
-            source = PatternGeneratorOp(
-                self,
-                *condition_args,
-                width=self.args.width,
-                height=self.args.height,
-                pattern=self.args.pattern,
-                name="pattern_source",
-            )
-            source_output = "output"
-        elif self.args.source == "v4l2":
-            source = V4L2VideoCaptureOp(
-                self,
-                *condition_args,
-                device=self.args.device,
-                width=self.args.width,
-                height=self.args.height,
-                frame_rate=float(self.args.fps),
-                num_buffers=self.args.v4l2_buffers,
-                pixel_format=self.args.pixel_format,
-                name="v4l2_source",
-            )
-            source_output = "signal"
-        else:
-            raise RuntimeError(f"unsupported source '{self.args.source}'")
-
         recorder = GstVideoRecorderOp(
             self,
             encoder=self.args.encoder,
@@ -237,7 +213,43 @@ class GstVideoRecorderApp(Application):
             name="gst_video_recorder",
         )
 
-        self.add_flow(source, recorder, {(source_output, "input")})
+        if self.args.source == "pattern":
+            source = PatternGeneratorOp(
+                self,
+                *condition_args,
+                width=self.args.width,
+                height=self.args.height,
+                pattern=self.args.pattern,
+                name="pattern_source",
+            )
+            self.add_flow(source, recorder, {("output", "input")})
+        elif self.args.source == "v4l2":
+            pool = UnboundedAllocator(self, name="pool")
+
+            source = V4L2VideoCaptureOp(
+                self,
+                *condition_args,
+                allocator=pool,
+                device=self.args.device,
+                width=self.args.width,
+                height=self.args.height,
+                frame_rate=float(self.args.fps),
+                pixel_format=self.args.pixel_format,
+                name="v4l2_source",
+            )
+            format_converter = FormatConverterOp(
+                self,
+                name="format_converter",
+                in_dtype="rgba8888",
+                out_dtype="rgba8888",
+                pool=pool,
+            )
+
+            self.add_flow(source, format_converter, {("signal", "source_video")})
+            self.add_flow(format_converter, recorder, {("tensor", "input")})
+
+        else:
+            raise RuntimeError(f"unsupported source '{self.args.source}'")
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
@@ -343,12 +355,6 @@ def build_arg_parser() -> argparse.ArgumentParser:
         default="auto",
         help="V4L2 fourcc preference: auto, AB24, RGB3, MJPG/MJPEG, or YUYV",
     )
-    parser.add_argument(
-        "--v4l2-buffers",
-        type=int,
-        default=4,
-        help="number of V4L2 buffers used by Holoscan's V4L2VideoCaptureOp",
-    )
 
     # Pattern generator options
     parser.add_argument(
@@ -366,8 +372,6 @@ def validate_args(args: argparse.Namespace) -> None:
         raise SystemExit("--width and --height must be positive integers")
     if args.max_buffers < 0:
         raise SystemExit("--max-buffers must be >= 0")
-    if args.v4l2_buffers <= 0:
-        raise SystemExit("--v4l2-buffers must be > 0")
     if args.fps <= 0:
         raise SystemExit("--fps must be > 0")
     if args.framerate is None:
