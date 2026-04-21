@@ -8,9 +8,10 @@
 			}
 		],
 		"language": "C++",
-		"version": "1.0.0",
+		"version": "1.0.1",
 		"changelog": {
-			"1.0.0": "Initial Release"
+			"1.0.0": "Initial Release",
+			"1.0.1": "Moved C++ implementation to cpp subtree"
 		},
 		"requirements": {
 			"system_packages": [
