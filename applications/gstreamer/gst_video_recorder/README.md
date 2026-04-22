@@ -52,13 +52,13 @@ Examples with the C++ implementation:
 
 | Using the V4L2 Camera | Generating Test Patterns |
 | --- | --- |
-| `./holohub run gst_video_recorder --language cpp v4l2` | `./holohub run gst_video_recorder --language cpp pattern` |
+| `./holohub run gst_video_recorder v4l2 --language cpp` | `./holohub run gst_video_recorder pattern--language cpp` |
 
 Examples with the Python implementation:
 
 | Using the V4L2 Camera | Generating Test Patterns |
 | --- | --- |
-| `./holohub run gst_video_recorder --language python v4l2` | `./holohub run gst_video_recorder --language python pattern` |
+| `./holohub run gst_video_recorder v4l2 --language python` | `./holohub run gst_video_recorder  pattern --language python` |
 
 These commands build and run the customized container for this application with all the dependencies installed (defined by `Dockerfile`), and then build and start the application using the default settings. The output video will be saved in the build directory as `output.mp4`.
 
