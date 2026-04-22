@@ -52,7 +52,7 @@ if(BUILD_TESTING)
     # Test 1: check if the pipeline runs successfully
     add_test(
         NAME gst_video_recorder_test
-        COMMAND $<TARGET_FILE:gst-video-recorder> --source pattern --count 10 -o ${OUTPUT_FILE}
+        COMMAND bash -c "rm -f ${OUTPUT_FILE} && $<TARGET_FILE:gst-video-recorder> --source pattern --count 10 -o ${OUTPUT_FILE}"
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
     )
 
