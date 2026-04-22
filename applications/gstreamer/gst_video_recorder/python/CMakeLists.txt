@@ -28,14 +28,23 @@ if(BUILD_TESTING)
   find_package(holoscan 1.0 REQUIRED CONFIG PATHS "/opt/nvidia/holoscan" "/workspace/holoscan-sdk/install")
 
   set(RECORDING_DIR ${CMAKE_CURRENT_BINARY_DIR}/recording_output)
+  set(OUTPUT_FILE ${RECORDING_DIR}/python_gst_video_recorder_output.mp4)
+
   file(MAKE_DIRECTORY ${RECORDING_DIR})
 
+  # Test 1: remove outputfile from previous tests
+  add_test(
+    NAME gst_video_recorder_python_cleanup_test
+    COMMAND ${CMAKE_COMMAND} -E rm -f ${OUTPUT_FILE}
+  )
+
+  # Test 2: check if the pipeline runs successfully
   add_test(
     NAME gst_video_recorder_python_test
     COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/gst_video_recorder.py
             --source pattern
             --count 10
-            -o ${RECORDING_DIR}/python_gst_video_recorder_output.mp4
+            -o ${OUTPUT_FILE}
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
   )
 
@@ -46,8 +55,29 @@ if(BUILD_TESTING)
   )
 
   set_tests_properties(gst_video_recorder_python_test PROPERTIES
+    DEPENDS gst_video_recorder_python_cleanup_test
     PASS_REGULAR_EXPRESSION "EOS processed, pipeline finished cleanly"
     FAIL_REGULAR_EXPRESSION "[^a-z]Error;ERROR;Failed"
+  )
+
+  # Test 3: check if the output file was created
+  add_test(
+    NAME gst_video_recorder_python_output_file_test
+    COMMAND bash -c "test -f ${OUTPUT_FILE}"
+  )
+
+  set_tests_properties(gst_video_recorder_python_output_file_test PROPERTIES
+    DEPENDS gst_video_recorder_python_test
+  )
+
+  # Test 4: check if the output file is a valid MPEG video file
+  add_test(
+    NAME gst_video_recorder_python_valid_mpeg_test
+    COMMAND bash -c "ffprobe -v error ${OUTPUT_FILE}"
+  )
+
+  set_tests_properties(gst_video_recorder_python_valid_mpeg_test PROPERTIES
+    DEPENDS gst_video_recorder_python_output_file_test
   )
 endif()
 
