@@ -96,7 +96,6 @@ class PatternGeneratorOp(Operator):
         height: int = 1080,
         pattern: int = 0,
         storage_type: int = 1,
-        allocator=None,
         **kwargs,
     ):
         self.width = int(width)
@@ -210,7 +209,6 @@ class GstVideoRecorderApp(Application):
 
     def compose(self):
         condition_args = self._source_condition_args()
-        allocator = UnboundedAllocator(self, name="allocator")
 
         recorder = GstVideoRecorderOp(
             self,
@@ -226,7 +224,6 @@ class GstVideoRecorderApp(Application):
             source = PatternGeneratorOp(
                 self,
                 *condition_args,
-                allocator=allocator,
                 width=self.args.width,
                 height=self.args.height,
                 pattern=self.args.pattern,
@@ -235,6 +232,8 @@ class GstVideoRecorderApp(Application):
             )
             self.add_flow(source, recorder, {("output", "input")})
         elif self.args.source == "v4l2":
+            allocator = UnboundedAllocator(self, name="allocator")
+
             source = V4L2VideoCaptureOp(
                 self,
                 *condition_args,
