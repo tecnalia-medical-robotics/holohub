@@ -19,3 +19,20 @@ pybind11_add_holohub_module(
     CLASS_NAME "GstVideoRecorderOp"
     SOURCES gst_video_recorder_op.cpp
 )
+
+if(BUILD_TESTING)
+  find_package(holoscan 1.0 REQUIRED CONFIG PATHS "/opt/nvidia/holoscan" "/workspace/holoscan-sdk/install")
+
+  add_test(
+    NAME holoscan_gstreamer_bridge_python_import_test
+    COMMAND python3 -c
+            "from holohub.holoscan_gstreamer_bridge import GstVideoRecorderOp; assert GstVideoRecorderOp.__name__ == 'GstVideoRecorderOp'; assert GstVideoRecorderOp.__doc__"
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+  )
+
+  set_property(
+    TEST holoscan_gstreamer_bridge_python_import_test
+    PROPERTY ENVIRONMENT
+      "PYTHONPATH=${GXF_LIB_DIR}/../python/lib:${CMAKE_BINARY_DIR}/python/lib"
+  )
+endif()
