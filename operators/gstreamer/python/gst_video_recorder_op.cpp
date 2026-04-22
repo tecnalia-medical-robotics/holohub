@@ -87,7 +87,7 @@ PYBIND11_MODULE(_holoscan_gstreamer_bridge, m) {
              PyGstVideoRecorderOp,
              Operator,
              std::shared_ptr<GstVideoRecorderOp>>(
-      m, "GstVideoRecorderOp", doc::GstVideoRecorderOp::doc_GstVideoRecorderOp_python)
+      m, "GstVideoRecorderOp", doc::GstVideoRecorderOp::doc_GstVideoRecorderOp)
       .def(py::init<Fragment*,
                     const py::args&,
                     const std::string&,
@@ -107,7 +107,7 @@ PYBIND11_MODULE(_holoscan_gstreamer_bridge, m) {
            "filename"_a = "output.mp4"s,
            "properties"_a = std::map<std::string, std::string>{},
            "name"_a = "gst_video_recorder"s,
-          doc::GstVideoRecorderOp::doc_GstVideoRecorderOp_python)
+          doc::GstVideoRecorderOp::doc_GstVideoRecorderOp)
       .def("initialize",
           &GstVideoRecorderOp::initialize,
           doc::GstVideoRecorderOp::doc_initialize)

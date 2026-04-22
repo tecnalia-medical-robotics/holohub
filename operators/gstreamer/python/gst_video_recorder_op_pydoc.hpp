@@ -27,7 +27,7 @@ namespace holoscan::doc {
 namespace GstVideoRecorderOp {
 
 // PyGstVideoRecorderOp Constructor
-PYDOC(GstVideoRecorderOp_python, R"doc(
+PYDOC(GstVideoRecorderOp, R"doc(
 
 Operator for recording video streams to file using GStreamer.
 
