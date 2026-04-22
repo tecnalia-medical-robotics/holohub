@@ -73,14 +73,14 @@ def parse_key_value_properties(items: list[str]) -> Dict[str, Any]:
     props: Dict[str, Any] = {}
     for item in items:
         if "=" not in item:
-            raise argparse.ArgumentTypeError(f"invalid --property '{item}', expected KEY=VALUE")
+            raise SystemExit(f"invalid --property '{item}', expected KEY=VALUE")
         key, value = item.split("=", 1)
         key = key.strip()
         value = value.strip()
         if not key:
-            raise argparse.ArgumentTypeError("property key cannot be empty")
+            raise SystemExit("property key cannot be empty")
         if not value:
-            raise argparse.ArgumentTypeError("property value cannot be empty")
+            raise SystemExit("property value cannot be empty")
         props[key] = value
     return props
 
