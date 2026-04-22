@@ -170,14 +170,15 @@ class PatternGeneratorOp(Operator):
 
         frame = self.xp.empty((self.height, self.width, RGBA_CHANNELS), dtype=self.xp.uint8)
         bar_width = self.width // SMPTE_COLOR_BARS
-        if bar_width == 0:
-            bar_width = 1
+        bar_width = max(1, bar_width)
 
-        for x in range(self.width):
-            bar_idx = x // bar_width
-            if bar_idx >= SMPTE_COLOR_BARS:
-                bar_idx = SMPTE_COLOR_BARS - 1
-            frame[:, x, :] = colors[bar_idx]
+        x_coords = self.xp.arange(self.width, dtype=self.xp.int32)
+        bar_indices = x_coords // bar_width
+        bar_indices = self.xp.minimum(bar_indices, SMPTE_COLOR_BARS - 1)
+
+        column_colors = colors[bar_indices]
+        frame[...] = column_colors[self.xp.newaxis, :, :]
+
         return frame
 
     def compute(self, op_input, op_output, context):
