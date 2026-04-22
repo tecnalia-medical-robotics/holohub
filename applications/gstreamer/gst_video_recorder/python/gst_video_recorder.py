@@ -301,7 +301,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         dest="count",
         type=int,
         default=None,
-        help="number of frames to capture or generate (default: unlimited)",
+        help="number of frames to produce or capture; 0 means unlimited (default: unlimited)",
     )
     parser.add_argument(
         "--property",
@@ -373,8 +373,8 @@ def validate_args(args: argparse.Namespace) -> None:
         raise SystemExit("--framerate cannot be empty")
     if args.count is None:
         args.count = 0
-    elif not (1 <= args.count <= 1_000_000_000):
-        raise SystemExit("--count must be between 1 and 1000000000")
+    elif not (0 <= args.count <= 1_000_000_000):
+        raise SystemExit("--count must be 0 (unlimited) or between 1 and 1000000000")
     args.properties = parse_key_value_properties(args.property)
 
 
