@@ -354,7 +354,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--storage",
         type=int,
         choices=(0, 1),
-        default=1,
+        default=0,
         help="memory storage type: 0 = host memory, 1 = device or CUDA memory",
     )
 
