@@ -362,6 +362,12 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 
 def validate_args(args: argparse.Namespace) -> None:
+    if not str(args.output).strip():
+        raise SystemExit("--output cannot be empty")
+    if not str(args.encoder).strip():
+        raise SystemExit("--encoder cannot be empty")
+    if args.source == "v4l2" and not str(args.device).strip():
+        raise SystemExit("--device cannot be empty when --source is v4l2")
     if not (64 <= args.width <= 8192):
         raise SystemExit("--width must be between 64 and 8192")
     if not (64 <= args.height <= 8192):
