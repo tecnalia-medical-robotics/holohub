@@ -86,8 +86,8 @@ Select the implementation with `--language cpp` or `--language python`:
 | No manual dependency installation is required. Dependencies are installed in the application container image. | Install dependencies on the host, from the `gst_video_recorder` directory: |
 | `./holohub build gst_video_recorder --language cpp` | `./install_deps.sh` |
 | `./holohub build gst_video_recorder --language python` | Then build locally: |
-|  | `./holohub build --local gst_video_recorder --language cpp` |
-|  | `./holohub build --local gst_video_recorder --language python` |
+| | `./holohub build --local gst_video_recorder --language cpp` |
+| | `./holohub build --local gst_video_recorder --language python` |
 
 ### Usage Reference
 
