@@ -69,9 +69,7 @@ def parse_key_value_properties(items: list[str]) -> Dict[str, Any]:
     props: Dict[str, Any] = {}
     for item in items:
         if "=" not in item:
-            raise argparse.ArgumentTypeError(
-                f"invalid --property '{item}', expected KEY=VALUE"
-            )
+            raise argparse.ArgumentTypeError(f"invalid --property '{item}', expected KEY=VALUE")
         key, value = item.split("=", 1)
         key = key.strip()
         value = value.strip()
@@ -129,8 +127,7 @@ class PatternGeneratorOp(Operator):
             self.xp.uint8
         )
         frame[..., 2] = (
-            128.0
-            + 127.0 * self.xp.cos((self._x + self._y) * 0.005 + self.time_offset)
+            128.0 + 127.0 * self.xp.cos((self._x + self._y) * 0.005 + self.time_offset)
         ).astype(self.xp.uint8)
         frame[..., 3] = ALPHA_OPAQUE
         return frame
@@ -145,13 +142,9 @@ class PatternGeneratorOp(Operator):
         square_size = max(1, square_size)
 
         board = (
-            (
-                (self._x.astype(self.xp.int32) // square_size)
-                + (self._y.astype(self.xp.int32) // square_size)
-            )
-            % 2
-            == 0
-        )
+            (self._x.astype(self.xp.int32) // square_size)
+            + (self._y.astype(self.xp.int32) // square_size)
+        ) % 2 == 0
         color = self.xp.where(board, ALPHA_OPAQUE, 0).astype(self.xp.uint8)
 
         frame = self.xp.empty((self.height, self.width, RGBA_CHANNELS), dtype=self.xp.uint8)
@@ -165,12 +158,12 @@ class PatternGeneratorOp(Operator):
         colors = self.xp.array(
             [
                 [255, 255, 255, ALPHA_OPAQUE],  # White
-                [255, 255, 0, ALPHA_OPAQUE],    # Yellow
-                [0, 255, 255, ALPHA_OPAQUE],    # Cyan
-                [0, 255, 0, ALPHA_OPAQUE],      # Green
-                [255, 0, 255, ALPHA_OPAQUE],    # Magenta
-                [255, 0, 0, ALPHA_OPAQUE],      # Red
-                [0, 0, 255, ALPHA_OPAQUE],      # Blue
+                [255, 255, 0, ALPHA_OPAQUE],  # Yellow
+                [0, 255, 255, ALPHA_OPAQUE],  # Cyan
+                [0, 255, 0, ALPHA_OPAQUE],  # Green
+                [255, 0, 255, ALPHA_OPAQUE],  # Magenta
+                [255, 0, 0, ALPHA_OPAQUE],  # Red
+                [0, 0, 255, ALPHA_OPAQUE],  # Blue
             ],
             dtype=self.xp.uint8,
         )
