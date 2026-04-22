@@ -25,7 +25,7 @@ add_executable(gst-video-recorder
 
 target_include_directories(gst-video-recorder
   PRIVATE
-  ${CMAKE_CURRENT_SOURCE_DIR}/../common
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../common
 )
 
 target_link_libraries(gst-video-recorder
