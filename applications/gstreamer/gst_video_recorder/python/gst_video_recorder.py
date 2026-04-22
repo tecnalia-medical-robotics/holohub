@@ -23,8 +23,12 @@ import numpy as np
 
 try:
     import cupy as cp
-except ImportError:  # optional, only needed for --storage 1 in pattern mode
-    cp = None
+except ImportError as exc:
+    raise ImportError(
+        "gst_video_recorder Python implementation requires CuPy. "
+        "Use the containerized build or install the matching CuPy wheel "
+        "for your CUDA version (for example, cupy-cuda12x or cupy-cuda13x)."
+    ) from exc
 
 from holoscan.conditions import CountCondition
 from holoscan.core import Application, Operator, OperatorSpec
@@ -348,8 +352,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--storage",
         type=int,
         choices=(0, 1),
-        default=0,
-        help="memory storage type: 0 = host memory, 1 = device or CUDA memory",
+        default=1,
+        help="memory storage type: 0 = host memory, 1 = device or CUDA memory (default: 1)",
     )
 
     return parser

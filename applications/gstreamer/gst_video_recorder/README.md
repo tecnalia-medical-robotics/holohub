@@ -89,6 +89,10 @@ Select the implementation with `--language cpp` or `--language python`:
 | | `./holohub build --local gst_video_recorder --language cpp` |
 | | `./holohub build --local gst_video_recorder --language python` |
 
+For the Python implementation, the pattern source uses device storage by default and requires CuPy.
+The containerized build uses the Holoscan base image, which already provides CuPy.
+For local builds, install the CuPy wheel matching your CUDA major version before running the Python application or tests, for example `python3 -m pip install cupy-cuda12x` or `python3 -m pip install cupy-cuda13x`.
+
 ### Usage Reference
 
 Reference for running `gst_video_recorder` that includes:
@@ -151,6 +155,8 @@ The command line options include the following main categories:
 | --- | --- | --- |
 | `--pattern <type>` | Pattern type: `0` = animated gradient, `1` = animated checkerboard, `2` = color bars (SMPTE style) | `0` |
 | `--storage <type>` | Memory storage type: `0` = host memory, `1` = device or CUDA memory | `1` |
+
+In the Python implementation, CuPy is required for device or CUDA.
 
 ## Testing
 
