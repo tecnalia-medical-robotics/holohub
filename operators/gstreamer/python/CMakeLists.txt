@@ -23,6 +23,10 @@ pybind11_add_holohub_module(
 if(BUILD_TESTING)
   find_package(holoscan 1.0 REQUIRED CONFIG PATHS "/opt/nvidia/holoscan" "/workspace/holoscan-sdk/install")
 
+  set(PYTHON_TEST_ENV
+      "PYTHONPATH=${GXF_LIB_DIR}/../python/lib:${CMAKE_BINARY_DIR}/python/lib:$ENV{PYTHONPATH}"
+  )
+
   add_test(
     NAME holoscan_gstreamer_bridge_python_import_test
     COMMAND python3 -c
@@ -30,9 +34,16 @@ if(BUILD_TESTING)
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
   )
 
-  set_property(
-    TEST holoscan_gstreamer_bridge_python_import_test
-    PROPERTY ENVIRONMENT
-      "PYTHONPATH=${GXF_LIB_DIR}/../python/lib:${CMAKE_BINARY_DIR}/python/lib"
+  add_test(
+    NAME gst_video_recorder_op_python_pytest
+    COMMAND ${Python3_EXECUTABLE} -m pytest ${CMAKE_CURRENT_SOURCE_DIR}/tests
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+  )
+
+  set_tests_properties(
+    holoscan_gstreamer_bridge_python_import_test
+    gst_video_recorder_op_python_pytest
+    PROPERTIES
+      ENVIRONMENT "${PYTHON_TEST_ENV}"
   )
 endif()
