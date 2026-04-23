@@ -10,8 +10,7 @@
 		"language": "C++",
 		"version": "1.1.0",
 		"changelog": {
-			"1.0.0": "Initial Release",
-			"1.1.0": "Moved C++ implementation to cpp subtree"
+			"1.0.0": "Initial Release"
 		},
 		"requirements": {
 			"system_packages": [
