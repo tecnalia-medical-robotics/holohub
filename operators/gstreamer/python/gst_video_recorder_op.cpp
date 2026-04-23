@@ -38,7 +38,7 @@ namespace py = pybind11;
 #define STRINGIFY(x) #x
 #define MACRO_STRINGIFY(x) STRINGIFY(x)
 
-namespace holoscan::ops {
+namespace holoscan {
 
 class PyGstVideoRecorderOp : public GstVideoRecorderOp {
  public:
@@ -116,4 +116,4 @@ PYBIND11_MODULE(_holoscan_gstreamer_bridge, m) {
           "spec"_a,
           doc::GstVideoRecorderOp::doc_setup);
 }  // PYBIND11_MODULE NOLINT
-}  // namespace holoscan::ops
+}  // namespace holoscan
