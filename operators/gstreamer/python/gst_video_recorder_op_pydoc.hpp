@@ -40,6 +40,8 @@ Width, height, and storage type are automatically detected from the first frame.
 Parameters
 ----------
 
+fragment : holoscan.core.Fragment
+    Fragment that owns the operator.
 encoder : str
     Encoder base name (e.g. ``"nvh264"``, ``"nvh265"``, ``"x264"``, or ``"x265"``).
     The "enc" suffix is automatically appended to form the element name.
@@ -66,6 +68,9 @@ properties : dict of str to str
     Map of encoder-specific properties.
     Examples include ``{"bitrate": "8000", "preset": "1", "gop-size": "30"}``.
     Default value is an empty dictionary.
+name : str
+    Operator name.
+    Default value is ``"gst_video_recorder"``.
 )doc")
 
 PYDOC(initialize, R"doc(
