@@ -156,7 +156,8 @@ The command line options include the following main categories:
 | `--pattern <type>` | Pattern type: `0` = animated gradient, `1` = animated checkerboard, `2` = color bars (SMPTE style) | `0` |
 | `--storage <type>` | Memory storage type: `0` = host memory, `1` = device or CUDA memory | `1` |
 
-In the Python implementation, CuPy is required for device or CUDA.
+The Python implementation requires both NumPy and CuPy.
+CuPy is required because the Python implementation uses device storage in the default path, matching the C++ defaults.
 
 ## Testing
 
