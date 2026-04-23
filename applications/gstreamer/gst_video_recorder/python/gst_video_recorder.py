@@ -103,8 +103,6 @@ class PatternGeneratorOp(Operator):
         self.pattern = int(pattern)
         self.storage_type = int(storage_type)
         self.xp = np if self.storage_type == 0 else cp
-        if self.xp is None:
-            raise RuntimeError("--storage 1 requires CuPy to be installed")
 
         self.time_offset = 0.0
         self.animation_time = 0.0
