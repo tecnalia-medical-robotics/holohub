@@ -52,7 +52,7 @@ Examples with the C++ implementation:
 
 | Using the V4L2 Camera | Generating Test Patterns |
 | --- | --- |
-| `./holohub run gst_video_recorder v4l2 --language cpp` | `./holohub run gst_video_recorder pattern--language cpp` |
+| `./holohub run gst_video_recorder v4l2 --language cpp` | `./holohub run gst_video_recorder pattern --language cpp` |
 
 Examples with the Python implementation:
 
