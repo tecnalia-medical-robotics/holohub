@@ -21,8 +21,8 @@ publishers, subscribers.
 """
 
 import threading
-from concurrent.futures import Future
-from queue import Queue
+from concurrent.futures import Future, InvalidStateError
+from queue import Empty, Full, Queue
 
 import holoscan.core
 import rclpy
@@ -221,17 +221,27 @@ class Bridge(holoscan.core.Resource):
 
         def _on_receive(self, message):
             """Handle received messages."""
-            with self.lock:
-                if not self.promise_queue.empty():
-                    future = self.promise_queue.get()
+            while True:
+                with self.lock:
+                    try:
+                        future = self.promise_queue.get_nowait()
+                    except Empty:
+                        try:
+                            self.message_queue.put_nowait(message)
+                        except Full:
+                            break
+                        return
+
+                if future.done():
+                    continue
+
+                try:
                     future.set_result(message)
-                elif (
-                    self.message_queue_max_size == 0
-                    or self.message_queue.qsize() < self.message_queue_max_size
-                ):
-                    self.message_queue.put(message)
-                else:
-                    holoscan.core.log_warn("Message queue is full, dropping message")
+                except InvalidStateError:
+                    continue
+                return
+
+            holoscan.core.log_warn("Message queue is full, dropping message")
 
         def receive(self):
             """Receive a message.
@@ -239,16 +249,16 @@ class Bridge(holoscan.core.Resource):
             Returns:
                 A future that will contain the received message
             """
+            future = Future()
             with self.lock:
-                if not self.message_queue.empty():
-                    msg = self.message_queue.get()
-                    future = Future()
-                    future.set_result(msg)
+                try:
+                    msg = self.message_queue.get_nowait()
+                except Empty:
+                    self.promise_queue.put_nowait(future)
                     return future
-                else:
-                    future = Future()
-                    self.promise_queue.put(future)
-                    return future
+
+            future.set_result(msg)
+            return future
 
     def create_subscription(self, message_type, topic_name, qos, message_queue_max_size=0):
         """Create a new subscriber.
