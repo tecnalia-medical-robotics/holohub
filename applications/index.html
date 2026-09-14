@@ -558,7 +558,7 @@
                 <div style="position: sticky; top: 80px; max-height: calc(100vh - 80px); overflow-y: auto; overflow-x: hidden; padding-bottom: 1rem; will-change: transform;">
                     <h4 style="font-size: 0.9rem; margin-bottom: 1rem; font-weight: 700; padding: 1rem 1rem 0 1rem;">Applications</h4>
                     <nav class="sidebar-nav" data-page-type="applications" style="display: flex; flex-direction: column; gap: 0;">
-                        <a href="#all" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('all'); return true;">All (113)</a>
+                        <a href="#all" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('all'); return true;">All (114)</a>
                         <a href="#camera" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Camera'); return true;">Camera (13)</a>
                         <a href="#computer-vision-and-perception" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Computer Vision and Perception'); return true;">Computer Vision (33)</a>
                         <a href="#distributed" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Distributed'); return true;">Distributed (11)</a>
@@ -573,7 +573,7 @@
                         <a href="#rendering" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Rendering'); return true;">Rendering (8)</a>
                         <a href="#robotics" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Robotics'); return true;">Robotics (7)</a>
                         <a href="#scheduler" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Scheduler'); return true;">Scheduler (1)</a>
-                        <a href="#signal-processing" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Signal Processing'); return true;">Signal Processing (12)</a>
+                        <a href="#signal-processing" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Signal Processing'); return true;">Signal Processing (13)</a>
                         <a href="#streaming" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Streaming'); return true;">Streaming (13)</a>
                         <a href="#video" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Video'); return true;">Video (57)</a>
                         <a href="#visualization" style="display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--md-default-fg-color); font-size: 0.7rem; transition: all 0.2s;" onclick="filterByTag('Visualization'); return true;">Visualization (48)</a>
@@ -595,6 +595,17 @@
                     
             
  <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-recent="true">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/usrp_spectrum_viewer/';">
+                    <span class="new-badge" style="position: absolute; top: 10px; right: 10px; background-color: #76b900; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">New</span>
+                    <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/usrp_spectrum_viewer/docs/Spectrum_Output.png" alt="USRP Spectrum Viewer" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/usrp_spectrum_viewer/" onclick="event.stopPropagation();">USRP Spectrum Viewer</a></h3>
+                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
+                    <p class="feature-card-desc">The USRP Spectrum Viewer application receives RF samples from a USRP radio, ingests CHDR packets through DAQIRI, conv...</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:signal-processing" class="md-tag" style="display: none;">signal processing</a> <a href="/holohub/tags/#tag:usrp" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">usrp</a> <a href="/holohub/tags/#tag:sdr" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">sdr</a> <a href="/holohub/tags/#tag:dpdk" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">dpdk</a> <a href="/holohub/tags/#tag:holoviz" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">holoviz</a></div>
+                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
+                </div>
+            </div>
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-recent="true">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/procedural_narrator/';">
                     <span class="new-badge" style="position: absolute; top: 10px; right: 10px; background-color: #76b900; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">New</span>
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/procedural_narrator/demo.gif" alt="Procedural Narrator" width="120" height="120">
@@ -605,9 +616,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-recent="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/holoscan_ros2/thor_vb1940/';">
-                    <span class="new-badge" style="position: absolute; top: 10px; right: 10px; background-color: #76b900; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">New</span>
+                    
                     <img src="/holohub/assets/images/application_default.png" alt="ROS2 VB1940 (Eagle) Camera on Jetson Thor" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/holoscan_ros2/thor_vb1940/" onclick="event.stopPropagation();">ROS2 VB1940 (Eagle) Camera on Jetson Thor</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
@@ -616,9 +627,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-recent="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/holoscan_ros2/imx274/';">
-                    <span class="new-badge" style="position: absolute; top: 10px; right: 10px; background-color: #76b900; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">New</span>
+                    
                     <img src="/holohub/assets/images/application_default.png" alt="ROS2 IMX274 Camera" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/holoscan_ros2/imx274/" onclick="event.stopPropagation();">ROS2 IMX274 Camera</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
@@ -627,9 +638,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/ai_surgical_video/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/ai_surgical_video/images/RAISVP_overall_diagram.png" alt="Real-Time End-to-end AI Surgical Video Pipeline" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/ai_surgical_video/" onclick="event.stopPropagation();">Real-Time End-to-end AI Surgical Video Pipeline</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
@@ -638,9 +649,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/daqiri_raw_ethernet_bench/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="/holohub/assets/images/application_default.png" alt="DAQIRI Raw Ethernet Benchmark" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/daqiri_raw_ethernet_bench/" onclick="event.stopPropagation();">DAQIRI Raw Ethernet Benchmark</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
@@ -666,7 +677,7 @@
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/foxglove_endoscopy_tool_tracking/docs/foxglove_endoscopy_tool_tracking.png" alt="Foxglove endoscopy tool tracking" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/foxglove_endoscopy_tool_tracking/" onclick="event.stopPropagation();">Foxglove endoscopy tool tracking</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
-                    <p class="feature-card-desc">Python entry point for publishing the endoscopy tool-tracking graph to Foxglove Studio.</p>
+                    <p class="feature-card-desc">Endoscopy tool-tracking graph that publishes video, tool annotations and state to Foxglove Studio.</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: none;">visualization</a> <a href="/holohub/tags/#tag:observability" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">observability</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:inference" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">inference</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
@@ -682,20 +693,20 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/gstreamer/gst_video_recorder/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
-                    <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/gstreamer/gst_video_recorder/docs/pipeline_diagram.png" alt="Python GStreamer Video Recorder" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/gstreamer/gst_video_recorder/" onclick="event.stopPropagation();">Python GStreamer Video Recorder</a></h3>
+                    
+                    <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/gstreamer/gst_video_recorder/docs/pipeline_diagram.png" alt="GStreamer Video Recorder" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/gstreamer/gst_video_recorder/" onclick="event.stopPropagation();">GStreamer Video Recorder</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
                     <p class="feature-card-desc">Record Holoscan video streams to file using GStreamer encoding. Supports multiple codecs (H.264, H.265, VP8, VP9) and both host/device memory for efficient video recording.</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:video" class="md-tag" style="display: none;">video</a> <a href="/holohub/tags/#tag:gstreamer" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">gstreamer</a> <a href="/holohub/tags/#tag:recording" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">recording</a> <a href="/holohub/tags/#tag:encoding" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">encoding</a> <a href="/holohub/tags/#tag:file" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">file</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/tak/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="/holohub/assets/images/application_default.png" alt="Multi-Object Tracking and Detection with TAK" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/tak/" onclick="event.stopPropagation();">Multi-Object Tracking and Detection with TAK</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
@@ -704,9 +715,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/tracks2endo4d/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/tracks2endo4d/images/output.gif" alt="Tracks2Endo4D" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/tracks2endo4d/" onclick="event.stopPropagation();">Tracks2Endo4D</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
@@ -792,9 +803,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/ultrasound_postprocessing/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/ultrasound_postprocessing/docs/assets/designer.jpg" alt="Ultrasound Post-Processing Filter Design" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/ultrasound_postprocessing/" onclick="event.stopPropagation();">Ultrasound Post-Processing Filter Design</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">python</span>
@@ -803,9 +814,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/bci_visualization/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/bci_visualization/docs/brain_activity_example.gif" alt="Kernel Flow BCI Real-Time Visualization" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/bci_visualization/" onclick="event.stopPropagation();">Kernel Flow BCI Real-Time Visualization</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
@@ -814,9 +825,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/pipeline_visualization/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/pipeline_visualization/pipeline_visualization.png" alt="Live Streaming Data Web Dashboard with NATS" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/pipeline_visualization/" onclick="event.stopPropagation();">Live Streaming Data Web Dashboard with NATS</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
@@ -825,9 +836,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/surgical_scene_recon/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/surgical_scene_recon/docs/cmr_render.gif" alt="G-SHARP: Gaussian Splatting for Holographic Anatomical Reconstruction Pipeline" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/surgical_scene_recon/" onclick="event.stopPropagation();">G-SHARP: Gaussian Splatting for Holographic Anatomical Reconstruction Pipeline</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
@@ -847,9 +858,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/video_streaming/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/video_streaming/screenshot_streaming_demo.png" alt="Video Streaming Demo" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/video_streaming/" onclick="event.stopPropagation();">Video Streaming Demo</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
@@ -858,36 +869,25 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/video_streaming/video_streaming_client/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
-                    <img src="/holohub/assets/images/application_default.png" alt="Video Streaming Client Demo (Python)" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/video_streaming/video_streaming_client/" onclick="event.stopPropagation();">Video Streaming Client Demo (Python)</a></h3>
-                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
-                    <p class="feature-card-desc">Python implementation of video streaming client using Holoscan SDK streaming operators</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:streaming" class="md-tag" style="display: none;">streaming</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:client" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">client</a> <a href="/holohub/tags/#tag:real-time" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">real-time</a> <a href="/holohub/tags/#tag:demo" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">demo</a> <a href="/holohub/tags/#tag:v4l2" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">v4l2</a></div>
-                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
-                </div>
-            </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/video_streaming/video_streaming_server/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
-                    <img src="/holohub/assets/images/application_default.png" alt="Video Streaming Server Demo (Python)" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/video_streaming/video_streaming_server/" onclick="event.stopPropagation();">Video Streaming Server Demo (Python)</a></h3>
+                    
+                    <img src="/holohub/assets/images/application_default.png" alt="Video Streaming Server Demo (C++)" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/video_streaming/video_streaming_server/" onclick="event.stopPropagation();">Video Streaming Server Demo (C++)</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
-                    <p class="feature-card-desc">Python implementation of video streaming server using Holoscan SDK streaming operators</p>
+                    <p class="feature-card-desc">C++ implementation of video streaming server using Holoscan SDK streaming operators</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:streaming" class="md-tag" style="display: none;">streaming</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:server" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">server</a> <a href="/holohub/tags/#tag:real-time" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">real-time</a> <a href="/holohub/tags/#tag:network" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">network</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
  <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/nvidia_video_codec/nvc_encode_decode/';">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/video_streaming/video_streaming_client/';">
                     
-                    <img src="/holohub/assets/images/application_default.png" alt="NVIDIA Video Codec: Encode-Decode Video" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/nvidia_video_codec/nvc_encode_decode/" onclick="event.stopPropagation();">NVIDIA Video Codec: Encode-Decode Video</a></h3>
+                    <img src="/holohub/assets/images/application_default.png" alt="Video Streaming Client Demo (C++)" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/video_streaming/video_streaming_client/" onclick="event.stopPropagation();">Video Streaming Client Demo (C++)</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
-                    <p class="feature-card-desc">This application demonstrates the use of NVIDIA Video Codec SDK.</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:streaming" class="md-tag" style="display: none;">streaming</a> <a href="/holohub/tags/#tag:nvidia-video-codec" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">nvidia video codec</a> <a href="/holohub/tags/#tag:h.264" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">h.264</a> <a href="/holohub/tags/#tag:h.265" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">h.265</a> <a href="/holohub/tags/#tag:hevc" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">hevc</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a></div>
+                    <p class="feature-card-desc">C++ implementation of video streaming client using Holoscan SDK streaming operators</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:streaming" class="md-tag" style="display: none;">streaming</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:client" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">client</a> <a href="/holohub/tags/#tag:real-time" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">real-time</a> <a href="/holohub/tags/#tag:network" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">network</a> <a href="/holohub/tags/#tag:v4l2" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">v4l2</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -913,14 +913,14 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/holoscan_ros2/pubsub/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
-                    <img src="/holohub/assets/images/application_default.png" alt="ROS2 Publisher/Subscriber" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/holoscan_ros2/pubsub/" onclick="event.stopPropagation();">ROS2 Publisher/Subscriber</a></h3>
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/nvidia_video_codec/nvc_encode_decode/';">
+                    
+                    <img src="/holohub/assets/images/application_default.png" alt="NVIDIA Video Codec: Encode-Decode Video" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/nvidia_video_codec/nvc_encode_decode/" onclick="event.stopPropagation();">NVIDIA Video Codec: Encode-Decode Video</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
-                    <p class="feature-card-desc">This application demonstrates basic communication between Holoscan and ROS2, containing both publisher and subscriber...</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:robotics" class="md-tag" style="display: none;">robotics</a> <a href="/holohub/tags/#tag:ros2" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">ros2</a> <a href="/holohub/tags/#tag:publisher" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">publisher</a> <a href="/holohub/tags/#tag:subscriber" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">subscriber</a> <a href="/holohub/tags/#tag:python" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">python</a></div>
+                    <p class="feature-card-desc">This application demonstrates the use of NVIDIA Video Codec SDK.</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:streaming" class="md-tag" style="display: none;">streaming</a> <a href="/holohub/tags/#tag:nvidia-video-codec" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">nvidia video codec</a> <a href="/holohub/tags/#tag:h.264" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">h.264</a> <a href="/holohub/tags/#tag:h.265" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">h.265</a> <a href="/holohub/tags/#tag:hevc" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">hevc</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -935,9 +935,20 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/holoscan_ros2/pubsub/';">
+                    
+                    <img src="/holohub/assets/images/application_default.png" alt="Holoscan ROS2 Publisher/Subscriber Examples" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/holoscan_ros2/pubsub/" onclick="event.stopPropagation();">Holoscan ROS2 Publisher/Subscriber Examples</a></h3>
+                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
+                    <p class="feature-card-desc">This application demonstrates basic communication between Holoscan and ROS2, containing both publisher and subscriber...</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:robotics" class="md-tag" style="display: none;">robotics</a> <a href="/holohub/tags/#tag:ros2" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">ros2</a> <a href="/holohub/tags/#tag:publisher" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">publisher</a> <a href="/holohub/tags/#tag:subscriber" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">subscriber</a></div>
+                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
+                </div>
+            </div>
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/iio/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/iio/images/pluto_fft_realtime.png" alt="Industrial I/O (IIO) - ADALM-Pluto SDR Integration" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/iio/" onclick="event.stopPropagation();">Industrial I/O (IIO) - ADALM-Pluto SDR Integration</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
@@ -968,14 +979,14 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/slang/slang_gamma_correction/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/slang/slang_gamma_correction/slang_gamma_correction.png" alt="Slang Gamma Correction" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/slang/slang_gamma_correction/" onclick="event.stopPropagation();">Slang Gamma Correction</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
                     <p class="feature-card-desc">Example for using the Slang shading language operator for gamma correction</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:rendering" class="md-tag" style="display: none;">rendering</a> <a href="/holohub/tags/#tag:slang" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">slang</a> <a href="/holohub/tags/#tag:shading" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">shading</a> <a href="/holohub/tags/#tag:shader" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">shader</a> <a href="/holohub/tags/#tag:compute" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">compute</a> <a href="/holohub/tags/#tag:cuda" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">cuda</a> <a href="/holohub/tags/#tag:gamma" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">gamma</a></div>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:rendering" class="md-tag" style="display: none;">rendering</a> <a href="/holohub/tags/#tag:slang" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">slang</a> <a href="/holohub/tags/#tag:shading" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">shading</a> <a href="/holohub/tags/#tag:shader" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">shader</a> <a href="/holohub/tags/#tag:compute" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">compute</a> <a href="/holohub/tags/#tag:cuda" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">cuda</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -990,11 +1001,11 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/slang/slang_simple/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
-                    <img src="/holohub/assets/images/application_default.png" alt="Slang Simple Compute Kernel Example" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/slang/slang_simple/" onclick="event.stopPropagation();">Slang Simple Compute Kernel Example</a></h3>
+                    
+                    <img src="/holohub/assets/images/application_default.png" alt="Slang Simple Compute Kernel" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/slang/slang_simple/" onclick="event.stopPropagation();">Slang Simple Compute Kernel</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
                     <p class="feature-card-desc">Example for using the Slang shading language operator for simple compute kernels</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:rendering" class="md-tag" style="display: none;">rendering</a> <a href="/holohub/tags/#tag:slang" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">slang</a> <a href="/holohub/tags/#tag:shading" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">shading</a> <a href="/holohub/tags/#tag:shader" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">shader</a> <a href="/holohub/tags/#tag:shadertoy" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">shadertoy</a> <a href="/holohub/tags/#tag:compute" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">compute</a> <a href="/holohub/tags/#tag:raytracing" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">raytracing</a> <a href="/holohub/tags/#tag:cuda" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">cuda</a></div>
@@ -1023,9 +1034,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/distributed/grpc/grpc_endoscopy_tool_tracking/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/distributed/grpc/grpc_endoscopy_tool_tracking/static/overview.png" alt="Distributed Endoscopy Tool Tracking with gRPC" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/distributed/grpc/grpc_endoscopy_tool_tracking/" onclick="event.stopPropagation();">Distributed Endoscopy Tool Tracking with gRPC</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
@@ -1067,9 +1078,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/aja_video_capture/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="/holohub/assets/images/application_default.png" alt="AJA Video Capture" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/aja_video_capture/" onclick="event.stopPropagation();">AJA Video Capture</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
@@ -1089,9 +1100,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/stereo_vision/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/stereo_vision/images/plants.gif" alt="Stereo Vision" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/stereo_vision/" onclick="event.stopPropagation();">Stereo Vision</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
@@ -1111,17 +1122,6 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/ehr_query_llm/lmm/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
-                    <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/ehr_query_llm/lmm/imgs/ssl_warning.jpg" alt="EHR Agent Framework" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/ehr_query_llm/lmm/" onclick="event.stopPropagation();">EHR Agent Framework</a></h3>
-                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
-                    <p class="feature-card-desc">The EHR Agent Framework is designed to handle and interact with EHR (Electronic Health Records) and it provides a mod...</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:audio" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">audio</a> <a href="/holohub/tags/#tag:zeromq" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">zeromq</a> <a href="/holohub/tags/#tag:asr" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">asr</a> <a href="/holohub/tags/#tag:healthcare-interop" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">healthcare interop</a> <a href="/holohub/tags/#tag:rag" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">rag</a> <a href="/holohub/tags/#tag:vector-database" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">vector database</a></div>
-                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
-                </div>
-            </div>
  <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/ehr_query_llm/fhir/';">
                     
@@ -1134,13 +1134,13 @@
                 </div>
             </div>
  <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/laser_detection_latency/laser_detection/';">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/ehr_query_llm/lmm/';">
                     
-                    <img src="/holohub/assets/images/application_default.png" alt="Laser Detection" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/laser_detection_latency/laser_detection/" onclick="event.stopPropagation();">Laser Detection</a></h3>
+                    <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/ehr_query_llm/lmm/imgs/ssl_warning.jpg" alt="EHR Agent Framework" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/ehr_query_llm/lmm/" onclick="event.stopPropagation();">EHR Agent Framework</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
-                    <p class="feature-card-desc">This application demonstrates the latency differences between USB and EVT cameras by detecting laser pointer position...</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: none;">computer vision and perception</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:cv-cuda" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">cv cuda</a> <a href="/holohub/tags/#tag:camera" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">camera</a> <a href="/holohub/tags/#tag:detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">detection</a></div>
+                    <p class="feature-card-desc">The EHR Agent Framework is designed to handle and interact with EHR (Electronic Health Records) and it provides a mod...</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:audio" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">audio</a> <a href="/holohub/tags/#tag:zeromq" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">zeromq</a> <a href="/holohub/tags/#tag:asr" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">asr</a> <a href="/holohub/tags/#tag:healthcare-interop" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">healthcare interop</a> <a href="/holohub/tags/#tag:rag" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">rag</a> <a href="/holohub/tags/#tag:vector-database" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">vector database</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -1152,6 +1152,17 @@
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
                     <p class="feature-card-desc">This application performs monitor registration using an Emergent Vision Technologies (EVT) camera.</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: none;">computer vision and perception</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:image-processing" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">image processing</a> <a href="/holohub/tags/#tag:camera" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">camera</a> <a href="/holohub/tags/#tag:detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">detection</a></div>
+                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
+                </div>
+            </div>
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/laser_detection_latency/laser_detection/';">
+                    
+                    <img src="/holohub/assets/images/application_default.png" alt="Laser Detection" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/laser_detection_latency/laser_detection/" onclick="event.stopPropagation();">Laser Detection</a></h3>
+                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
+                    <p class="feature-card-desc">This application demonstrates the latency differences between USB and EVT cameras by detecting laser pointer position...</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: none;">computer vision and perception</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:cv-cuda" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">cv cuda</a> <a href="/holohub/tags/#tag:camera" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">camera</a> <a href="/holohub/tags/#tag:detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">detection</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -1189,6 +1200,17 @@
                 </div>
             </div>
  <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/distributed/ucx/ucx_endoscopy_tool_tracking/';">
+                    
+                    <img src="/holohub/assets/images/application_default.png" alt="UCX-based Distributed Endoscopy Tool Tracking" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/distributed/ucx/ucx_endoscopy_tool_tracking/" onclick="event.stopPropagation();">UCX-based Distributed Endoscopy Tool Tracking</a></h3>
+                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
+                    <p class="feature-card-desc">This application is similar to the Endoscopy Tool Tracking application, but the distributed version divides the appli...</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:distributed" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">distributed</a> <a href="/holohub/tags/#tag:surgical-ai" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">surgical ai</a> <a href="/holohub/tags/#tag:endoscopy" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">endoscopy</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">computer vision and perception</a> <a href="/holohub/tags/#tag:segmentation" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">segmentation</a></div>
+                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
+                </div>
+            </div>
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/distributed/ucx/ucx_h264_endoscopy_tool_tracking/';">
                     
                     <img src="/holohub/assets/images/application_default.png" alt="Distributed H.264 Endoscopy Tool Tracking" width="120" height="120">
@@ -1196,17 +1218,6 @@
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
                     <p class="feature-card-desc">This application is similar to the H.264 Endoscopy Tool Tracking application, but this distributed version divides th...</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:surgical-ai" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">surgical ai</a> <a href="/holohub/tags/#tag:distributed" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">distributed</a> <a href="/holohub/tags/#tag:holoviz" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">holoviz</a> <a href="/holohub/tags/#tag:lstm" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">lstm</a> <a href="/holohub/tags/#tag:tensorrt" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">tensorrt</a> <a href="/holohub/tags/#tag:endoscopy" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">endoscopy</a></div>
-                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
-                </div>
-            </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/distributed/ucx/ucx_endoscopy_tool_tracking/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
-                    <img src="/holohub/assets/images/application_default.png" alt="UCX-based Distributed Endoscopy Tool Tracking" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/distributed/ucx/ucx_endoscopy_tool_tracking/" onclick="event.stopPropagation();">UCX-based Distributed Endoscopy Tool Tracking</a></h3>
-                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
-                    <p class="feature-card-desc">This application is similar to the Endoscopy Tool Tracking application, but the distributed version divides the appli...</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:distributed" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">distributed</a> <a href="/holohub/tags/#tag:surgical-ai" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">surgical ai</a> <a href="/holohub/tags/#tag:endoscopy" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">endoscopy</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">computer vision and perception</a> <a href="/holohub/tags/#tag:segmentation" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">segmentation</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -1320,9 +1331,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/volume_rendering/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/volume_rendering/screenshot.png" alt="Volume rendering using ClaraViz" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/volume_rendering/" onclick="event.stopPropagation();">Volume rendering using ClaraViz</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
@@ -1375,9 +1386,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/holochat/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/holochat/holochat_demo.gif" alt="HoloChat" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/holochat/" onclick="event.stopPropagation();">HoloChat</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
@@ -1398,17 +1409,6 @@
                 </div>
             </div>
  <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/matlab_gpu_coder/matlab_beamform/';">
-                    
-                    <img src="/holohub/assets/images/application_default.png" alt="Ultrasound Beamforming with MATLAB" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/matlab_gpu_coder/matlab_beamform/" onclick="event.stopPropagation();">Ultrasound Beamforming with MATLAB</a></h3>
-                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
-                    <p class="feature-card-desc">This application does real-time ultrasound beamforming of simulated data.</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:synthetic-aperture-beamforming" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">synthetic aperture beamforming</a> <a href="/holohub/tags/#tag:signal-processing" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">signal processing</a> <a href="/holohub/tags/#tag:beamforming" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">beamforming</a> <a href="/holohub/tags/#tag:ultrasound" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">ultrasound</a></div>
-                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
-                </div>
-            </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/matlab_gpu_coder/matlab_image_processing/';">
                     
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/matlab_gpu_coder/matlab_image_processing/screenshot.png" alt="Image Processing with MATLAB GPU Coder" width="120" height="120">
@@ -1416,6 +1416,17 @@
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
                     <p class="feature-card-desc">This application does real-time image processing of Holoscan sample data.</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: none;">computer vision and perception</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:optimization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">optimization</a> <a href="/holohub/tags/#tag:image-processing" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">image processing</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:holoviz" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">holoviz</a></div>
+                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
+                </div>
+            </div>
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/matlab_gpu_coder/matlab_beamform/';">
+                    
+                    <img src="/holohub/assets/images/application_default.png" alt="Ultrasound Beamforming with MATLAB" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/matlab_gpu_coder/matlab_beamform/" onclick="event.stopPropagation();">Ultrasound Beamforming with MATLAB</a></h3>
+                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
+                    <p class="feature-card-desc">This application does real-time ultrasound beamforming of simulated data.</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:synthetic-aperture-beamforming" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">synthetic aperture beamforming</a> <a href="/holohub/tags/#tag:signal-processing" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">signal processing</a> <a href="/holohub/tags/#tag:beamforming" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">beamforming</a> <a href="/holohub/tags/#tag:ultrasound" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">ultrasound</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -1458,7 +1469,7 @@
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/openigtlink_3dslicer/images/openigtlink_3dslicer_graph.png" alt="OpenIGTLink 3D Slicer" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/openigtlink_3dslicer/" onclick="event.stopPropagation();">OpenIGTLink 3D Slicer</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
-                    <p class="feature-card-desc">Bidirectional video streaming with AI segmentation</p>
+                    <p class="feature-card-desc">This application demonstrates how to interface Holoscan SDK with 3D Slicer, using the OpenIGTLink protocol.</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:networking-and-distributed-computing" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">networking and distributed computing</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:3d-slicer" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">3d slicer</a> <a href="/holohub/tags/#tag:segmentation" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">segmentation</a> <a href="/holohub/tags/#tag:ultrasound" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">ultrasound</a> <a href="/holohub/tags/#tag:endoscopy" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">endoscopy</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
@@ -1496,9 +1507,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/hyperspectral_segmentation/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/hyperspectral_segmentation/screenshot.png" alt="Hyperspectral Image Segmentation" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/hyperspectral_segmentation/" onclick="event.stopPropagation();">Hyperspectral Image Segmentation</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
@@ -1540,9 +1551,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/cvcuda_basic/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="/holohub/assets/images/application_default.png" alt="Simple CV-CUDA" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/cvcuda_basic/" onclick="event.stopPropagation();">Simple CV-CUDA</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
@@ -1559,6 +1570,17 @@
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
                     <p class="feature-card-desc">[!NOTE] DAQIRI migration (June 26, 2026): HoloHub networking examples, which previously utilized the Basic or Advance...</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:signal-processing" class="md-tag" style="display: none;">signal processing</a> <a href="/holohub/tags/#tag:networking-and-distributed-computing" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">networking and distributed computing</a> <a href="/holohub/tags/#tag:gpudirect" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">gpudirect</a> <a href="/holohub/tags/#tag:dpdk" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">dpdk</a></div>
+                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
+                </div>
+            </div>
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/webrtc_video_server/';">
+                    
+                    <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/webrtc_video_server/screenshot.png" alt="WebRTC Video Server" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/webrtc_video_server/" onclick="event.stopPropagation();">WebRTC Video Server</a></h3>
+                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
+                    <p class="feature-card-desc">This app reads video frames from a file and sends it to a browser using WebRTC.</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:networking-and-distributed-computing" class="md-tag" style="display: none;">networking and distributed computing</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:webrtc" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">webrtc</a> <a href="/holohub/tags/#tag:communications" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">communications</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -1585,19 +1607,8 @@
                 </div>
             </div>
  <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/webrtc_video_server/';">
-                    
-                    <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/webrtc_video_server/screenshot.png" alt="WebRTC Video Server" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/webrtc_video_server/" onclick="event.stopPropagation();">WebRTC Video Server</a></h3>
-                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
-                    <p class="feature-card-desc">This app reads video frames from a file and sends it to a browser using WebRTC.</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:networking-and-distributed-computing" class="md-tag" style="display: none;">networking and distributed computing</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:webrtc" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">webrtc</a> <a href="/holohub/tags/#tag:communications" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">communications</a></div>
-                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
-                </div>
-            </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/orthorectification_with_optix/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/orthorectification_with_optix/docs/odm_ortho_pipeline.png" alt="Orthorectification with NVIDIA OptiX" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/orthorectification_with_optix/" onclick="event.stopPropagation();">Orthorectification with NVIDIA OptiX</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
@@ -1640,13 +1651,13 @@
                 </div>
             </div>
  <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/yolo_model_deployment/';">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/object_detection_torch/';">
                     
-                    <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/yolo_model_deployment/docs/meeting.gif" alt="Yolo Object Detection" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/yolo_model_deployment/" onclick="event.stopPropagation();">Yolo Object Detection</a></h3>
-                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
-                    <p class="feature-card-desc">This project is aiming to provide basic guidance to deploy Yolo-based model to Holoscan SDK as "Bring Your Own Model"...</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: none;">computer vision and perception</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:tensor-optimization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">tensor optimization</a> <a href="/holohub/tags/#tag:yolo-detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">yolo detection</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:camera" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">camera</a></div>
+                    <img src="/holohub/assets/images/application_default.png" alt="Object Detection using PyTorch Faster R-CNN" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/object_detection_torch/" onclick="event.stopPropagation();">Object Detection using PyTorch Faster R-CNN</a></h3>
+                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
+                    <p class="feature-card-desc">This application performs object detection using frcnn resnet50 model from torchvision.</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: none;">computer vision and perception</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">detection</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:holoviz" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">holoviz</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -1662,19 +1673,19 @@
                 </div>
             </div>
  <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/object_detection_torch/';">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/yolo_model_deployment/';">
                     
-                    <img src="/holohub/assets/images/application_default.png" alt="Object Detection using PyTorch Faster R-CNN" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/object_detection_torch/" onclick="event.stopPropagation();">Object Detection using PyTorch Faster R-CNN</a></h3>
-                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">C++</span>
-                    <p class="feature-card-desc">This application performs object detection using frcnn resnet50 model from torchvision.</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: none;">computer vision and perception</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">detection</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:holoviz" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">holoviz</a></div>
+                    <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/yolo_model_deployment/docs/meeting.gif" alt="Yolo Object Detection" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/yolo_model_deployment/" onclick="event.stopPropagation();">Yolo Object Detection</a></h3>
+                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
+                    <p class="feature-card-desc">This project is aiming to provide basic guidance to deploy Yolo-based model to Holoscan SDK as "Bring Your Own Model"...</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: none;">computer vision and perception</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:tensor-optimization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">tensor optimization</a> <a href="/holohub/tags/#tag:yolo-detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">yolo detection</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:camera" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">camera</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/multiai_endoscopy/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/multiai_endoscopy/images/app_multiai_endoscopy.png" alt="Multi AI Detection and Tool Segmentation" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/multiai_endoscopy/" onclick="event.stopPropagation();">Multi AI Detection and Tool Segmentation</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
@@ -1694,9 +1705,9 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/fm_asr/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="https://raw.githubusercontent.com/nvidia-holoscan/holohub/main/applications/fm_asr/docs/images/pipeline_arch.png" alt="FM Radio Automatic Speech Recognition" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/fm_asr/" onclick="event.stopPropagation();">FM Radio Automatic Speech Recognition</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
@@ -1749,14 +1760,25 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
                 <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/endoscopy_tool_tracking/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
+                    
                     <img src="/holohub/assets/images/application_default.png" alt="Endoscopy Tool Tracking" width="120" height="120">
                     <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/endoscopy_tool_tracking/" onclick="event.stopPropagation();">Endoscopy Tool Tracking</a></h3>
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
                     <p class="feature-card-desc">Based on a LSTM (long-short term memory) stateful model, these applications demonstrate the use of custom components...</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:distributed" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">distributed</a> <a href="/holohub/tags/#tag:lstm" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">lstm</a> <a href="/holohub/tags/#tag:asynchronous-queues" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">asynchronous queues</a> <a href="/holohub/tags/#tag:grpc" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">grpc</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:computer-vision-and-perception" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">computer vision and perception</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a></div>
+                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
+                </div>
+            </div>
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/multiai_ultrasound/';">
+                    
+                    <img src="/holohub/assets/images/application_default.png" alt="Multi-AI Ultrasound" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/multiai_ultrasound/" onclick="event.stopPropagation();">Multi-AI Ultrasound</a></h3>
+                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
+                    <p class="feature-card-desc">This application demonstrates how to run multiple inference pipelines in a single application by leveraging the Holos...</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:cardiac-keypoints-detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">cardiac keypoints detection</a> <a href="/holohub/tags/#tag:ultrasound" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">ultrasound</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:classification" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">classification</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -1782,14 +1804,14 @@
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/multiai_ultrasound/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
-                    <img src="/holohub/assets/images/application_default.png" alt="Multi-AI Ultrasound" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/multiai_ultrasound/" onclick="event.stopPropagation();">Multi-AI Ultrasound</a></h3>
-                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python, C++</span>
-                    <p class="feature-card-desc">This application demonstrates how to run multiple inference pipelines in a single application by leveraging the Holos...</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a> <a href="/holohub/tags/#tag:cardiac-keypoints-detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">cardiac keypoints detection</a> <a href="/holohub/tags/#tag:ultrasound" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">ultrasound</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:classification" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">classification</a></div>
+ <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box">
+                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/ssd_detection_endoscopy_tools/';">
+                    
+                    <img src="/holohub/assets/images/application_default.png" alt="SSD Detection for Endoscopy Tools" width="120" height="120">
+                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/ssd_detection_endoscopy_tools/" onclick="event.stopPropagation();">SSD Detection for Endoscopy Tools</a></h3>
+                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
+                    <p class="feature-card-desc">We can train the SSD model from NVIDIA DeepLearningExamples repo with any data of our choosing.</p>
+                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:ssd" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">ssd</a> <a href="/holohub/tags/#tag:detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">detection</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -1801,17 +1823,6 @@
                     <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
                     <p class="feature-card-desc">This endoscopy tool segmentation application runs the MONAI Endoscopic Tool Segmentation from MONAI Model Zoo.</p>
                     <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:surgical-ai" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">surgical ai</a> <a href="/holohub/tags/#tag:endoscopy" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">endoscopy</a> <a href="/holohub/tags/#tag:segmentation" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">segmentation</a></div>
-                    <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
-                </div>
-            </div>
- <div class="col-xl-4 col-lg-6 col-sm-12 mb-1 feature-box" data-updated="true">
-                <div class="shadow padding-feature-box-item text-center d-block match-height app-card" style="cursor: pointer; position: relative;" onclick="window.location.href='/holohub/applications/ssd_detection_endoscopy_tools/';">
-                    <span class="updated-badge" style="position: absolute; top: 10px; right: 10px; background-color: #ff9933; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600;">Updated</span>
-                    <img src="/holohub/assets/images/application_default.png" alt="SSD Detection for Endoscopy Tools" width="120" height="120">
-                    <h3 class="mb-1 mt-0" style="font-size: 0.8rem;"><a href="/holohub/applications/ssd_detection_endoscopy_tools/" onclick="event.stopPropagation();">SSD Detection for Endoscopy Tools</a></h3>
-                    <span style="display: inline-block; background-color: var(--md-code-bg-color); color: var(--md-code-fg-color); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 600; margin-bottom: 0.5rem;">Python</span>
-                    <p class="feature-card-desc">We can train the SSD model from NVIDIA DeepLearningExamples repo with any data of our choosing.</p>
-                    <div class="md-tags md-nav__link md-typeset" style="line-height: 1.5; display: block;" onclick="event.stopPropagation();"><a href="/holohub/tags/#tag:healthcare-ai" class="md-tag" style="display: none;">healthcare ai</a> <a href="/holohub/tags/#tag:video" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">video</a> <a href="/holohub/tags/#tag:ssd" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">ssd</a> <a href="/holohub/tags/#tag:detection" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">detection</a> <a href="/holohub/tags/#tag:visualization" class="md-tag" style="display: inline-block; margin: 0.1rem; font-size: 0.55rem; padding: 0.05rem 0.25rem; cursor: pointer; transition: background-color 0.2s; text-decoration: none; line-height: normal; height: auto; width: auto;" onmouseover="this.style.backgroundColor='#5a9100';" onmouseout="this.style.backgroundColor='';" onclick="event.stopPropagation();">visualization</a></div>
                     <!-- <p class="nv-teaser-text-link">Learn More <i class="fa-solid fa-angle-right"></i></p> -->
                 </div>
             </div>
@@ -2121,6 +2132,8 @@
       
         
           
+        
+      
         
       
         
@@ -11998,14 +12011,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="velodyne_lidar_app/" class="md-nav__link ">
+            <a href="usrp_spectrum_viewer/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Velodyne VLP-16 Lidar Viewer
+    USRP Spectrum Viewer
   
 
     
@@ -12022,7 +12035,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Velodyne VLP-16 Lidar Viewer
+    USRP Spectrum Viewer
   
 
           </label>
@@ -12066,14 +12079,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="vila_live/" class="md-nav__link ">
+            <a href="velodyne_lidar_app/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    VILA Live
+    Velodyne VLP-16 Lidar Viewer
   
 
     
@@ -12090,7 +12103,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    VILA Live
+    Velodyne VLP-16 Lidar Viewer
   
 
           </label>
@@ -12134,6 +12147,74 @@
         
           
           <div class="md-nav__link md-nav__container">
+            <a href="vila_live/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VILA Live
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_77_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_77">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VILA Live
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_78" >
+        
+          
+          <div class="md-nav__link md-nav__container">
             <a href="psd_pipeline/" class="md-nav__link ">
               
   
@@ -12153,8 +12234,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_77_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_77">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_78_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_78">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12202,7 +12283,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_78" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_79" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -12224,14 +12305,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_78" id="__nav_2_78_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_79" id="__nav_2_79_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_78_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_78">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_79_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_79">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12267,7 +12348,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_78_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_79_2" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -12290,8 +12371,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_78_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_78_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_79_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_79_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12335,7 +12416,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_78_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_79_3" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -12358,8 +12439,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_78_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_78_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_79_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_79_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12377,74 +12458,6 @@
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_79" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="volume_rendering/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Volume rendering using ClaraViz
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_79_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_79">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Volume rendering using ClaraViz
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
             
           </ul>
@@ -12483,14 +12496,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="vpi_stereo/" class="md-nav__link ">
+            <a href="volume_rendering/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    VPI Stereo Vision
+    Volume rendering using ClaraViz
   
 
     
@@ -12507,7 +12520,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    VPI Stereo Vision
+    Volume rendering using ClaraViz
   
 
           </label>
@@ -12551,14 +12564,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="webrtc_holoviz_server/" class="md-nav__link ">
+            <a href="vpi_stereo/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    WebRTC Holoviz Server
+    VPI Stereo Vision
   
 
     
@@ -12575,7 +12588,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    WebRTC Holoviz Server
+    VPI Stereo Vision
   
 
           </label>
@@ -12619,14 +12632,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="webrtc_video_client/" class="md-nav__link ">
+            <a href="webrtc_holoviz_server/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    WebRTC Video Client
+    WebRTC Holoviz Server
   
 
     
@@ -12643,7 +12656,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    WebRTC Video Client
+    WebRTC Holoviz Server
   
 
           </label>
@@ -12687,14 +12700,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="webrtc_video_server/" class="md-nav__link ">
+            <a href="webrtc_video_client/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    WebRTC Video Server
+    WebRTC Video Client
   
 
     
@@ -12711,7 +12724,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    WebRTC Video Server
+    WebRTC Video Client
   
 
           </label>
@@ -12755,14 +12768,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="xr_gsplat/" class="md-nav__link ">
+            <a href="webrtc_video_server/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    XR + Gaussian Splatting
+    WebRTC Video Server
   
 
     
@@ -12779,7 +12792,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    XR + Gaussian Splatting
+    WebRTC Video Server
   
 
           </label>
@@ -12823,14 +12836,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="xr_holoviz/" class="md-nav__link ">
+            <a href="xr_gsplat/" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    XR + Holoviz
+    XR + Gaussian Splatting
   
 
     
@@ -12847,7 +12860,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    XR + Holoviz
+    XR + Gaussian Splatting
   
 
           </label>
@@ -12891,6 +12904,74 @@
         
           
           <div class="md-nav__link md-nav__container">
+            <a href="xr_holoviz/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XR + Holoviz
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_86_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_86">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    XR + Holoviz
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_87" >
+        
+          
+          <div class="md-nav__link md-nav__container">
             <a href="yolo_model_deployment/" class="md-nav__link ">
               
   
@@ -12910,8 +12991,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_86_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_86">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_87_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_87">
             <span class="md-nav__icon md-icon"></span>
             
   
